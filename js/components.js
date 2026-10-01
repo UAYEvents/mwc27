@@ -19,7 +19,6 @@
 
           <div class="nav__links" id="main-nav">
             <a class="nav__link${active('/home.html')}" href="${root}/home.html">Home</a>
-            <a class="nav__link${active('/about.html')}" href="${root}/about.html">About UAY</a>
             <a class="nav__link${active('/the-hub.html')}" href="${root}/the-hub.html">The Hub</a>
 
             <div class="nav__dropdown${proposalActive}">
@@ -31,6 +30,7 @@
               </div>
             </div>
 
+            <a class="nav__link${active('/about.html')}" href="${root}/about.html">About UAY</a>
             <a class="nav__link${active('/servicios.html')}" href="${root}/servicios.html">Servicios UAY</a>
           </div>
         </nav>
