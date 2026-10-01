@@ -1,0 +1,158 @@
+.home-hero{min-height:10vh;display:flex;align-items:flex-end;background:var(--alabaster);padding:clamp(80px,11vw,150px) 0 55px}
+.home-hero__grid{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(40px,7vw,110px);align-items:end}.home-hero__side{max-width:470px;padding-bottom:12px}.home-hero__side p{font-size:1.08rem}
+.home-intro{max-width:950px}.home-intro .h2{max-width:900px}
+.video-block{margin-top:55px}.video-block .media{aspect-ratio:16/8.5;background:var(--ink)}
+.video-block__caption{margin-top:32px;display:flex;justify-content:center;gap:20px;align-items:center}.video-block__caption p{margin:0;color:var(--muted)}
+.pre-project{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(40px,7vw,100px);align-items:start}.pre-project__links{border-top:1px solid var(--line)}.pre-project__link{display:grid;grid-template-columns:55px 1fr auto;gap:18px;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);transition:.25s ease}.pre-project__link:hover{padding-left:10px;color:var(--orange)}.pre-project__link span:first-child{font-size:.7rem;letter-spacing:.14em;font-weight:700}.pre-project__link strong{font-family:"Amaranth",sans-serif;font-size:1.5rem}.pre-project__link i{font-style:normal;font-size:1.2rem}
+.welcome-hub{text-align:center;max-width:1000px;margin:auto}.welcome-hub .h2{font-size:clamp(3.6rem,8vw,8rem)}.welcome-hub .lead{margin:22px auto 0}.welcome-hub__cta{margin-top:32px}.welcome-hub__venues{max-width:720px;margin:46px auto 0;color:rgba(255,255,255,.68);font-size:.9rem;letter-spacing:.02em}
+.venue-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:55px}
+@media(max-width:980px){.home-hero__grid,.pre-project{grid-template-columns:1fr}.home-hero{align-items:center}.venue-grid{grid-template-columns:1fr}.venue-card{min-height:520px}}
+
+/* ==================================================
+HOME HERO
+================================================== */
+
+.home-hero{
+  background:var(--alabaster);
+  padding:clamp(90px,11vw,150px) 0 clamp(80px,10vw,130px);
+}
+
+.home-hero__content{
+  max-width:1050px;
+}
+
+.home-hero__content .eyebrow{
+  margin-bottom:28px;
+}
+
+.home-hero__content .h1{
+  margin-bottom:35px;
+}
+
+.home-hero__lead{
+  max-width:760px;
+  margin:0;
+  font-size:clamp(1.15rem,1.8vw,1.55rem);
+  line-height:1.55;
+  font-weight:400;
+}
+
+.home-hero__cta{
+  margin-top:45px;
+}
+
+
+/* ==================================================
+THIS IS UAY
+================================================== */
+
+.home-uay{
+  background:var(--white);
+}
+
+.home-uay__heading{
+  max-width:950px;
+  margin-bottom:55px;
+}
+
+.home-uay__heading .eyebrow{
+  margin-bottom:22px;
+}
+
+.home-uay__grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.8fr) minmax(280px,.7fr);
+  gap:clamp(40px,6vw,90px);
+  align-items:stretch;
+}
+
+
+/* VIDEO */
+
+.home-uay__video .media{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  border-radius:28px;
+  background:var(--black);
+}
+
+.home-uay__video video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+
+/* TEXTO DERECHA */
+
+.home-uay__copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:10px 0;
+}
+
+.home-uay__statement{
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(1.8rem,2.8vw,2.8rem);
+  line-height:1.05;
+  margin:0 0 28px;
+}
+
+.home-uay__copy p:not(.home-uay__statement){
+  font-size:.95rem;
+  line-height:1.8;
+  max-width:420px;
+  margin:0;
+}
+
+.home-uay__copy .btn{
+  align-self:flex-start;
+  margin-top:40px;
+}
+
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media (max-width:900px){
+
+  .home-hero{
+    padding:80px 0;
+  }
+
+  .home-uay__grid{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .home-uay__copy{
+    gap:35px;
+  }
+
+  .home-uay__copy .btn{
+    margin-top:0;
+  }
+
+}
+
+
+@media (max-width:600px){
+
+  .home-hero__lead{
+    font-size:1.05rem;
+  }
+
+  .home-uay__heading{
+    margin-bottom:35px;
+  }
+
+  .home-uay__video .media{
+    border-radius:18px;
+  }
+
+}

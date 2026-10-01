@@ -1,0 +1,574 @@
+/* ==================================================
+VENUE HERO
+================================================== */
+
+.venue-hero{min-height:calc(100svh - var(--header-h));position:relative;display:flex;align-items:flex-end;color:var(--white);background:var(--ink);overflow:hidden}
+.venue-hero__image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.64}
+.venue-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08) 15%,rgba(0,0,0,.88) 100%)}
+.venue-hero__inner{position:relative;z-index:2;width:100%;padding:clamp(100px,13vw,170px) 0 60px}
+.venue-hero__title{max-width:1200px;margin:0;font-family:"Amaranth",sans-serif;font-size:clamp(4.5rem,10vw,10rem);line-height:.78;letter-spacing:-.055em}
+.venue-hero__claim{margin:35px 0 0;font-family:"Amaranth",sans-serif;font-size:clamp(1.5rem,3vw,2.8rem);line-height:1;color:var(--orange)}
+
+
+/* ==================================================
+OPENING
+================================================== */
+
+.venue-opening{padding:clamp(110px,14vw,190px) 0}
+.venue-opening__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(60px,9vw,140px);align-items:end}
+.venue-opening__title h2,.venue-concept__copy h2,.venue-journey-intro h2,.venue-details__heading h2,.venue-hospitality__heading h2,.venue-production__heading h2{margin:15px 0 0;font-family:"Amaranth",sans-serif;font-size:clamp(3.2rem,7vw,7rem);line-height:.87;letter-spacing:-.045em}
+.venue-opening__copy{max-width:600px}
+.venue-opening__copy p{line-height:1.75}
+.venue-opening__copy .lead{font-family:"Amaranth",sans-serif;font-size:clamp(1.5rem,2.5vw,2.2rem);line-height:1.2}
+.venue-facts{display:grid;grid-template-columns:repeat(4,1fr);margin-top:100px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.venue-fact{padding:25px 25px 25px 0}
+.venue-fact+.venue-fact{padding-left:25px;border-left:1px solid var(--line)}
+.venue-fact span{display:block;margin-bottom:8px;font-size:.64rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.venue-fact strong{font-family:"Amaranth",sans-serif;font-size:1.3rem}
+
+
+/* ==================================================
+CONCEPT
+================================================== */
+
+.venue-concept{padding:clamp(110px,14vw,190px) 0;background:var(--alabaster)}
+.venue-concept__statement{margin-bottom:100px;padding-bottom:50px;border-bottom:1px solid var(--line)}
+.venue-concept__statement>span{font-size:.65rem;letter-spacing:.15em}
+.venue-concept__statement p{max-width:1100px;margin:30px 0 0;font-family:"Amaranth",sans-serif;font-size:clamp(2.5rem,5vw,5.2rem);line-height:.95}
+.venue-concept__statement strong{color:var(--orange)}
+.venue-concept__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(50px,8vw,120px);align-items:center}
+.venue-concept__image img{display:block;width:100%;height:680px;object-fit:cover}
+.venue-concept__copy p{line-height:1.75}
+
+
+/* ==================================================
+JOURNEY INTRO
+================================================== */
+
+.venue-journey-intro{padding:clamp(100px,13vw,170px) 0;background:var(--ink);color:var(--white)}
+.venue-journey-intro p:last-child{max-width:620px;margin:40px 0 0;color:rgba(255,255,255,.62);font-size:1.08rem}
+
+
+/* ==================================================
+EXPERIENCE CHAPTERS
+================================================== */
+
+.experience-chapter{padding:clamp(110px,14vw,190px) 0}
+.experience-chapter--soft{background:var(--alabaster)}
+.experience-chapter--dark,.experience-chapter--black{background:var(--ink);color:var(--white)}
+.experience-chapter__heading{display:grid;grid-template-columns:90px 1fr;gap:25px;align-items:start;margin-bottom:65px}
+.experience-chapter__number{padding-top:9px;color:var(--orange);font-size:.7rem;letter-spacing:.15em;font-weight:700}
+.experience-chapter__heading h2{max-width:1100px;margin:8px 0 0;font-family:"Amaranth",sans-serif;font-size:clamp(3.3rem,7vw,7rem);line-height:.85;letter-spacing:-.05em}
+.experience-chapter__heading h2 span{color:var(--orange)}
+.experience-chapter__copy{max-width:680px;margin:0 0 65px 115px;font-size:1.05rem;line-height:1.8}
+.experience-chapter__intro{max-width:720px;margin:0 0 70px 115px;font-size:1.1rem;line-height:1.75;color:rgba(255,255,255,.65)}
+
+
+/* ==================================================
+VISUALS
+================================================== */
+
+.experience-visual{position:relative;margin:0;overflow:hidden;background:#ddd}
+.experience-visual img{display:block;width:100%;height:100%;object-fit:cover}
+.experience-visual--hero{height:min(75vw,780px)}
+.experience-visual figcaption{position:absolute;left:20px;bottom:18px;padding:9px 12px;background:var(--ink);color:var(--white);font-size:.6rem;letter-spacing:.14em}
+.experience-split{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(50px,8vw,120px);align-items:center}
+.experience-split>.experience-visual{height:650px}
+.experience-split--reverse>.experience-visual{order:2}
+.experience-split--reverse>.experience-split__copy{order:1}
+.experience-split__copy{max-width:560px}
+.experience-split__copy p{line-height:1.75}
+.experience-split__copy .lead{font-family:"Amaranth",sans-serif;font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.15}
+.experience-tags,.experience-data{display:flex;flex-wrap:wrap;gap:8px;margin-top:40px}
+.experience-tags span,.experience-data span{padding:10px 14px;border:1px solid var(--line);border-radius:100px;font-size:.6rem;letter-spacing:.12em}
+
+
+/* ==================================================
+CHOOSE YOUR PATH
+================================================== */
+
+.paths{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.path-card{overflow:hidden;background:#1c1c1c}
+.path-card__visual{height:480px;overflow:hidden}
+.path-card__visual img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease)}
+.path-card:hover img{transform:scale(1.03)}
+.path-card__content{padding:35px}
+.path-card__content>span,.path-card small{font-size:.62rem;letter-spacing:.15em;color:rgba(255,255,255,.42)}
+.path-card h3{margin:25px 0;font-family:"Amaranth",sans-serif;font-size:clamp(2.5rem,5vw,5rem);line-height:.82;color:var(--orange)}
+.path-card p{max-width:520px;color:rgba(255,255,255,.68);line-height:1.7}
+.path-card small{display:block;margin-top:35px}
+.paths-converge{display:flex;align-items:center;gap:20px;margin-top:50px;padding-top:35px;border-top:1px solid rgba(255,255,255,.18)}
+.paths-converge span{font-family:"Amaranth",sans-serif;font-size:1.4rem}
+.paths-converge i{color:var(--orange)}
+.paths-converge strong{margin-left:auto;color:var(--orange);font-size:.72rem;letter-spacing:.13em}
+
+
+/* ==================================================
+EDITORIAL / WELCOME
+================================================== */
+
+.experience-editorial{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(50px,8vw,120px);align-items:center}
+.experience-editorial__copy{max-width:520px}
+.experience-editorial__copy p{line-height:1.75}
+.experience-editorial__copy .lead{font-family:"Amaranth",sans-serif;font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.15}
+.experience-editorial__copy blockquote{margin:55px 0 0;padding-top:30px;border-top:1px solid var(--line);font-family:"Amaranth",sans-serif;font-size:clamp(1.7rem,3vw,3rem);line-height:1.05;color:var(--orange)}
+.experience-editorial .experience-visual{height:720px}
+
+
+/* ==================================================
+REVEAL
+================================================== */
+
+.reveal-gallery{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}
+.reveal-gallery figure{margin:0;overflow:hidden}
+.reveal-gallery img{display:block;width:100%;height:100%;object-fit:cover}
+.reveal-gallery__main{height:720px}
+.reveal-gallery__secondary{height:720px}
+.reveal-statement{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;margin-top:70px;padding-top:45px;border-top:1px solid rgba(255,255,255,.18);align-items:end}
+.reveal-statement>p{margin:0;font-family:"Amaranth",sans-serif;font-size:clamp(3rem,6vw,6rem);line-height:.85}
+.reveal-statement>p span{color:var(--orange)}
+.reveal-statement>div{max-width:500px;color:rgba(255,255,255,.62);line-height:1.75}
+
+
+/* ==================================================
+DINNER
+================================================== */
+
+.dinner-copy{display:grid;grid-template-columns:1fr 1fr;gap:clamp(50px,9vw,140px);margin-top:60px}
+.dinner-copy>div{max-width:550px}
+.dinner-copy p{line-height:1.75}
+.dinner-copy .lead{font-family:"Amaranth",sans-serif;font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.15}
+
+
+/* ==================================================
+DETAILS
+================================================== */
+
+.venue-details{padding:clamp(110px,14vw,190px) 0}
+.venue-details__heading{max-width:1000px;margin-bottom:80px}
+.venue-details__heading>p:last-child{max-width:600px;margin-top:35px;line-height:1.75}
+.details-gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:350px 350px;gap:14px}
+.details-gallery figure{position:relative;margin:0;overflow:hidden;background:#ddd}
+.details-gallery__large{grid-row:1/3}
+.details-gallery img{display:block;width:100%;height:100%;object-fit:cover}
+.details-gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:20px;background:linear-gradient(transparent,rgba(0,0,0,.75));color:white;font-size:.65rem;letter-spacing:.13em}
+.details-gallery figcaption span{margin-right:20px;color:var(--orange)}
+
+
+/* ==================================================
+HOSPITALITY
+================================================== */
+
+.venue-hospitality{padding:clamp(110px,14vw,190px) 0;background:var(--orange)}
+.venue-hospitality__heading h2 span{color:var(--white)}
+.venue-hospitality__grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(60px,10vw,150px);margin-top:80px}
+.venue-hospitality__copy{max-width:520px}
+.venue-hospitality__copy p{line-height:1.75}
+.venue-hospitality__copy .lead{font-family:"Amaranth",sans-serif;font-size:clamp(1.6rem,2.5vw,2.4rem);line-height:1.15}
+.hospitality-list{border-top:1px solid rgba(0,0,0,.25)}
+.hospitality-list>div{display:grid;grid-template-columns:60px 140px 1fr;gap:20px;padding:28px 0;border-bottom:1px solid rgba(0,0,0,.25);align-items:center}
+.hospitality-list span{font-size:.65rem}
+.hospitality-list strong{font-family:"Amaranth",sans-serif;font-size:1.2rem}
+.hospitality-list p{margin:0}
+
+
+/* ==================================================
+PRODUCTION
+================================================== */
+
+.venue-production{padding:clamp(110px,14vw,190px) 0;background:var(--ink);color:var(--white)}
+.venue-production__heading h2 span{color:var(--orange)}
+.production-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:90px;border-top:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16)}
+.production-card{min-height:300px;padding:30px;border-right:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.production-card>span{font-size:.65rem;color:var(--orange)}
+.production-card h3{margin:80px 0 15px;font-family:"Amaranth",sans-serif;font-size:2rem}
+.production-card p{max-width:330px;margin:0;color:rgba(255,255,255,.58);line-height:1.65}
+
+
+/* ==================================================
+CLOSING
+================================================== */
+
+.venue-closing{padding:clamp(130px,17vw,240px) 0;background:#000000;color:var(--white);text-align:center}
+.venue-closing .container>span{font-size:.64rem;letter-spacing:.16em}
+.venue-closing h2{margin:55px 0 0;font-family:"Amaranth",sans-serif;font-size:clamp(4rem,9vw,9rem);line-height:.8;letter-spacing:-.055em}
+.venue-closing h2 strong{color:var(--orange);font-weight:inherit}
+
+
+/* ==================================================
+NEXT
+================================================== */
+
+.next-venue{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:45px 0}
+.next-venue p{margin:0}
+.next-venue a{font-family:"Amaranth",sans-serif;font-size:clamp(2rem,4vw,4rem);line-height:1;text-decoration:none}
+
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media(max-width:900px){
+
+  .venue-opening__grid,
+  .venue-concept__grid,
+  .experience-split,
+  .experience-editorial,
+  .reveal-statement,
+  .dinner-copy,
+  .venue-hospitality__grid{
+    grid-template-columns:1fr;
+  }
+
+  .venue-facts{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .venue-fact:nth-child(3){
+    border-left:0;
+  }
+
+  .venue-concept__image img,
+  .experience-split>.experience-visual,
+  .experience-editorial .experience-visual{
+    height:520px;
+  }
+
+  .paths{
+    grid-template-columns:1fr;
+  }
+
+  .reveal-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .reveal-gallery__main,
+  .reveal-gallery__secondary{
+    height:520px;
+  }
+
+  .production-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:700px){
+
+  .venue-facts{
+    grid-template-columns:1fr;
+  }
+
+  .venue-fact,
+  .venue-fact+.venue-fact{
+    padding:20px 0;
+    border-left:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .experience-chapter__heading{
+    grid-template-columns:45px 1fr;
+  }
+
+  .experience-chapter__copy,
+  .experience-chapter__intro{
+    margin-left:0;
+  }
+
+  .experience-split--reverse>.experience-visual,
+  .experience-split--reverse>.experience-split__copy{
+    order:initial;
+  }
+
+  .experience-visual--hero,
+  .experience-split>.experience-visual,
+  .experience-editorial .experience-visual,
+  .reveal-gallery__main,
+  .reveal-gallery__secondary{
+    height:420px;
+  }
+
+  .path-card__visual{
+    height:360px;
+  }
+
+  .paths-converge{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .paths-converge strong{
+    margin-left:0;
+  }
+
+  .details-gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:none;
+  }
+
+  .details-gallery__large{
+    grid-row:auto;
+  }
+
+  .details-gallery figure{
+    height:420px;
+  }
+
+  .hospitality-list>div{
+    grid-template-columns:40px 1fr;
+  }
+
+  .hospitality-list p{
+    grid-column:2;
+  }
+
+  .production-grid{
+    grid-template-columns:1fr;
+  }
+
+  .next-venue{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+}
+
+/* ==================================================
+SPACE PLAN + GUEST JOURNEY
+================================================== */
+
+.venue-flow{
+  padding:clamp(110px,14vw,190px) 0;
+  background:var(--white);
+}
+
+
+/* HEADING */
+
+.venue-flow__heading{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  column-gap:clamp(60px,9vw,140px);
+  align-items:end;
+  margin-bottom:70px;
+}
+
+.venue-flow__heading .eyebrow{
+  grid-column:1/-1;
+}
+
+.venue-flow__heading h2{
+  margin:15px 0 0;
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(3.2rem,7vw,7rem);
+  line-height:.87;
+  letter-spacing:-.045em;
+}
+
+.venue-flow__heading>p:last-child{
+  max-width:560px;
+  margin:0;
+  line-height:1.75;
+}
+
+
+/* PLAN */
+
+.venue-plan{
+  position:relative;
+  margin:0;
+  overflow:hidden;
+  border-radius:22px;
+  background:var(--alabaster);
+}
+
+.venue-plan img{
+  display:block;
+  width:100%;
+  height:auto;
+  min-height:500px;
+  object-fit:contain;
+  padding:clamp(20px,4vw,55px);
+}
+
+.venue-plan figcaption{
+  position:absolute;
+  left:22px;
+  bottom:20px;
+  padding:9px 13px;
+  border-radius:100px;
+  background:var(--ink);
+  color:var(--white);
+  font-size:.6rem;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+
+/* GUEST JOURNEY */
+
+.guest-journey{
+  margin-top:clamp(120px,15vw,200px);
+}
+
+.guest-journey__heading{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  column-gap:clamp(60px,9vw,140px);
+  align-items:end;
+  margin-bottom:70px;
+}
+
+.guest-journey__heading .eyebrow{
+  grid-column:1/-1;
+}
+
+.guest-journey__heading h2{
+  margin:15px 0 0;
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(3.2rem,7vw,7rem);
+  line-height:.87;
+  letter-spacing:-.045em;
+}
+
+.guest-journey__heading>p:last-child{
+  max-width:560px;
+  margin:0;
+  line-height:1.75;
+}
+
+
+/* JOURNEY TRACK */
+
+.guest-journey__track{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+
+.guest-step{
+  position:relative;
+  min-height:320px;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--white);
+  transition:
+    background .35s var(--ease),
+    color .35s var(--ease);
+}
+
+.guest-step__number{
+  display:block;
+  color:var(--orange);
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.guest-step__content h3{
+  margin:0 0 15px;
+  font-family:"Amaranth",sans-serif;
+  font-size:clamp(1.6rem,2.2vw,2.4rem);
+  line-height:.95;
+}
+
+.guest-step__content p{
+  max-width:280px;
+  margin:0;
+  line-height:1.6;
+  color:var(--muted);
+}
+
+.guest-step__objective{
+  display:block;
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  font-size:.62rem;
+  line-height:1.4;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+
+/* KEY MOMENTS */
+
+.guest-step--highlight{
+  background:var(--ink);
+  color:var(--white);
+}
+
+.guest-step--highlight .guest-step__number{
+  color:var(--orange);
+}
+
+.guest-step--highlight .guest-step__content p{
+  color:rgba(255,255,255,.62);
+}
+
+.guest-step--highlight .guest-step__objective{
+  border-color:rgba(255,255,255,.18);
+  color:rgba(255,255,255,.78);
+}
+
+
+/* HOVER */
+
+.guest-step:not(.guest-step--highlight):hover{
+  background:var(--alabaster);
+}
+
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media(max-width:1000px){
+
+  .guest-journey__track{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+
+@media(max-width:900px){
+
+  .venue-flow__heading,
+  .guest-journey__heading{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .venue-flow__heading .eyebrow,
+  .guest-journey__heading .eyebrow{
+    grid-column:auto;
+  }
+
+  .venue-plan img{
+    min-height:0;
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .guest-journey__track{
+    grid-template-columns:1fr;
+  }
+
+  .guest-step{
+    min-height:260px;
+  }
+
+}
