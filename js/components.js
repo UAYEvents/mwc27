@@ -31,7 +31,6 @@
             </div>
 
             <a class="nav__link${active('/about.html')}" href="${root}/about.html">About UAY</a>
-            <a class="nav__link${active('/servicios.html')}" href="${root}/servicios.html">Servicios UAY</a>
           </div>
         </nav>
       </header>`;
@@ -48,7 +47,6 @@
           <div class="footer__meta">
             <a href="${root}/the-hub.html">The hub</a>
             <a href="${root}/about.html">About UAY</a>
-            <a href="${root}/servicios.html">Servicios UAY</a>
           </div>
         </div>
       </footer>`;
