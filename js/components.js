@@ -19,7 +19,7 @@
 
           <div class="nav__links" id="main-nav">
             <a class="nav__link${active('/home.html')}" href="${root}/home.html">Home</a>
-            <a class="nav__link${active('/the-hub.html')}" href="${root}/the-hub.html">The Hub</a>
+            <a class="nav__link${active('/the-hub.html')}" href="${root}/the-hub.html">The Method</a>
 
             <div class="nav__dropdown${proposalActive}">
               <button class="nav__submenu-toggle${proposalActive}" type="button" aria-expanded="false">Propuesta</button>
@@ -43,10 +43,6 @@
         <div class="footer__inner">
           <div>
             <p class="eyebrow">UAY Events × NTT DATA · MWC27</p>
-          </div>
-          <div class="footer__meta">
-            <a href="${root}/the-hub.html">The hub</a>
-            <a href="${root}/about.html">About UAY</a>
           </div>
         </div>
       </footer>`;
