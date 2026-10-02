@@ -98,6 +98,7 @@ HERO
   margin:45px 0 0;
   font-family:"Amaranth",sans-serif;
   font-size:clamp(1.6rem,3vw,3rem);
+  margin-left:130px;
 }
 
 .hub-hero__footer{
@@ -465,7 +466,7 @@ MEMBERSHIP
 
 .hub-membership{
   padding:clamp(110px,14vw,190px) 0;
-  background:#f0eee9;
+  background:#ffffff;
 }
 
 .hub-membership__title h2 span{
@@ -945,6 +946,45 @@ Same visual component as Home
   display:none;
 }
 
+/* ==================================================
+   THE METHOD · LOGO
+================================================== */
+
+.hub-hero__logo {
+  width: min(760px, 90vw);
+  margin: 1.5rem 0;
+  padding-top: 80px;
+}
+
+.hub-hero__logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Extra spacing for sequential conceptual blocks */
+
+.hub-section-heading + .hub-pillars__list {
+  margin-top: 4rem;
+}
+
+.hub-pillars__list + .hub-section-heading {
+  margin-top: 8rem;
+}
+
+@media (max-width: 768px) {
+
+  .hub-hero__logo {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .hub-pillars__list + .hub-section-heading {
+    margin-top: 5rem;
+  }
+
+}
 
 /* ==================================================
 RESPONSIVE
