@@ -1,19 +1,427 @@
-.landing-page{background:var(--ink);color:var(--white);overflow:hidden}
-.access{min-height:100svh;position:relative;display:flex;align-items:stretch;isolation:isolate}
-.access__visual{position:absolute;inset:0;z-index:-2;background:
-  radial-gradient(circle at 78% 22%,rgba(243,128,46,.22),transparent 25%),
-  radial-gradient(circle at 15% 82%,rgba(243,128,46,.1),transparent 22%),
-  linear-gradient(135deg,#191919 0%,#202020 55%,#101010 100%)}
-.access__visual::before,.access__visual::after{content:"";position:absolute;border:1px solid rgba(255,255,255,.16);border-radius:50%}
-.access__visual::before{width:58vw;height:58vw;right:-16vw;top:-24vw}.access__visual::after{width:34vw;height:34vw;left:-12vw;bottom:-17vw}
-.access__line{position:absolute;height:1px;width:70vw;background:linear-gradient(90deg,transparent,var(--orange),transparent);transform:rotate(-24deg);left:28vw;top:50%;opacity:.6}
-.access__inner{width:min(calc(100% - (var(--pad)*2)),var(--max));margin:auto;min-height:100svh;padding:34px 0 46px;display:flex;flex-direction:column;justify-content:space-between}
-.access__top{display:flex;justify-content:space-between;gap:24px;align-items:center;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
-.access__top img{width:110px;filter:brightness(0) invert(1)}
-.access__main{max-width:1040px;padding:8vh 0}
-.access__label{display:flex;align-items:center;gap:14px;margin-bottom:24px;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}.access__dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 7px rgba(243,128,46,.12)}
-.access__claim{font-family:"Amaranth",sans-serif;font-size:clamp(4.8rem,14vw,13.5rem);line-height:.72;letter-spacing:-.055em;margin:0}.access__claim span{display:block;color:var(--orange);font-size:.34em;line-height:1.1;letter-spacing:-.03em;margin-top:.28em}
-.access__copy{max-width:650px;font-size:clamp(1rem,1.5vw,1.25rem);color:rgba(255,255,255,.74);margin:36px 0 0}
-.access__bottom{display:flex;justify-content:space-between;align-items:end;gap:30px}.access__code{font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
-.access__enter{min-width:190px}
-@media(max-width:650px){.access__top span{display:none}.access__bottom{align-items:flex-start;flex-direction:column-reverse}.access__enter{width:100%}.access__claim{font-size:clamp(4.2rem,25vw,7rem)}}
+/* ========================================
+   THE METHOD — LANDING
+======================================== */
+
+.landing-page{
+  background:var(--ink);
+  color:var(--white);
+  overflow:hidden;
+}
+
+
+/* ========================================
+   ACCESS
+======================================== */
+
+.access{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  align-items:stretch;
+  isolation:isolate;
+}
+
+
+/* ========================================
+   BACKGROUND
+======================================== */
+
+.access__visual{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+
+  background:
+    radial-gradient(
+      circle at 78% 22%,
+      rgba(243,128,46,.22),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 15% 82%,
+      rgba(243,128,46,.1),
+      transparent 22%
+    ),
+    linear-gradient(
+      135deg,
+      #191919 0%,
+      #202020 55%,
+      #101010 100%
+    );
+}
+
+
+.access__visual::before,
+.access__visual::after{
+  content:"";
+  position:absolute;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:50%;
+}
+
+
+.access__visual::before{
+  width:58vw;
+  height:58vw;
+  right:-16vw;
+  top:-24vw;
+}
+
+
+.access__visual::after{
+  width:34vw;
+  height:34vw;
+  left:-12vw;
+  bottom:-17vw;
+}
+
+
+.access__line{
+  position:absolute;
+
+  height:1px;
+  width:70vw;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--orange),
+      transparent
+    );
+
+  transform:rotate(-24deg);
+
+  left:28vw;
+  top:50%;
+
+  opacity:.6;
+}
+
+
+/* ========================================
+   INNER
+======================================== */
+
+.access__inner{
+  width:min(
+    calc(100% - (var(--pad) * 2)),
+    var(--max)
+  );
+
+  min-height:100svh;
+
+  margin:0 auto;
+
+  padding:
+    clamp(24px,4vh,40px)
+    0
+    clamp(45px,8vh,90px);
+
+  display:flex;
+  flex-direction:column;
+}
+
+
+/* ========================================
+   TOP
+======================================== */
+
+.access__top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  gap:24px;
+
+  flex-shrink:0;
+
+  font-size:.68rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+
+.access__top img{
+  width:110px;
+  filter:brightness(0) invert(1);
+}
+
+
+/* ========================================
+   MAIN CONTENT
+======================================== */
+
+.access__main{
+  max-width:1040px;
+
+  /*
+   * El contenido ocupa el espacio disponible.
+   * Esto permite mantener el botón visible
+   * sin pegarlo al borde inferior.
+   */
+
+  margin:auto 0;
+
+  padding:
+    clamp(30px,5vh,70px)
+    0;
+}
+
+
+/* ========================================
+   LABEL
+======================================== */
+
+.access__label{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  margin-bottom:24px;
+
+  font-size:.72rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+
+
+.access__dot{
+  width:8px;
+  height:8px;
+
+  flex-shrink:0;
+
+  border-radius:50%;
+
+  background:var(--orange);
+
+  box-shadow:
+    0 0 0 7px rgba(243,128,46,.12);
+}
+
+
+/* ========================================
+   CLAIM
+======================================== */
+
+.access__claim{
+  font-family:"Amaranth",sans-serif;
+
+  font-size:
+    clamp(4.8rem,14vw,13.5rem);
+
+  line-height:.72;
+
+  letter-spacing:-.055em;
+
+  margin:0;
+}
+
+
+.access__claim span{
+  display:block;
+
+  color:var(--orange);
+
+  font-size:.34em;
+
+  line-height:1.1;
+
+  letter-spacing:-.03em;
+
+  margin-top:.28em;
+}
+
+
+/* ========================================
+   COPY
+======================================== */
+
+.access__copy{
+  max-width:650px;
+
+  font-size:
+    clamp(1rem,1.5vw,1.25rem);
+
+  color:
+    rgba(255,255,255,.74);
+
+  margin:
+    clamp(24px,4vh,36px)
+    0
+    0;
+}
+
+
+/* ========================================
+   BUTTON AREA
+======================================== */
+
+.access__bottom{
+  width:100%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  flex-shrink:0;
+
+  /*
+   * El botón queda centrado horizontalmente
+   * y separado del borde inferior.
+   */
+
+  padding-bottom:clamp(10px,2vh,25px);
+}
+
+
+.access__enter{
+  min-width:210px;
+
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:14px;
+
+  text-align:center;
+}
+
+
+/* ========================================
+   LAPTOPS / LOW HEIGHT SCREENS
+======================================== */
+
+@media (max-height:800px){
+
+  .access__inner{
+    padding-top:22px;
+    padding-bottom:35px;
+  }
+
+
+  .access__main{
+    padding:20px 0 28px;
+  }
+
+
+  .access__claim{
+    font-size:
+      clamp(4.5rem,11vw,8.5rem);
+  }
+
+
+  .access__label{
+    margin-bottom:16px;
+  }
+
+
+  .access__copy{
+    margin-top:20px;
+    font-size:1rem;
+  }
+
+
+  .access__bottom{
+    padding-bottom:20px;
+  }
+
+}
+
+
+/* ========================================
+   VERY LOW HEIGHT SCREENS
+======================================== */
+
+@media (max-height:650px){
+
+  .access__inner{
+    padding-top:16px;
+    padding-bottom:20px;
+  }
+
+
+  .access__top img{
+    width:95px;
+  }
+
+
+  .access__main{
+    padding:14px 0 20px;
+  }
+
+
+  .access__claim{
+    font-size:
+      clamp(3.8rem,9vw,6.5rem);
+  }
+
+
+  .access__label{
+    margin-bottom:12px;
+    font-size:.65rem;
+  }
+
+
+  .access__copy{
+    margin-top:16px;
+    font-size:.92rem;
+    max-width:600px;
+  }
+
+
+  .access__bottom{
+    padding-bottom:10px;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width:650px){
+
+  .access__inner{
+    padding-top:24px;
+    padding-bottom:35px;
+  }
+
+
+  .access__top span{
+    display:none;
+  }
+
+
+  .access__main{
+    padding:35px 0;
+  }
+
+
+  .access__claim{
+    font-size:
+      clamp(4.2rem,25vw,7rem);
+  }
+
+
+  .access__copy{
+    font-size:1rem;
+  }
+
+
+  .access__bottom{
+    width:100%;
+    padding-bottom:20px;
+  }
+
+
+  .access__enter{
+    width:100%;
+  }
+
+}
